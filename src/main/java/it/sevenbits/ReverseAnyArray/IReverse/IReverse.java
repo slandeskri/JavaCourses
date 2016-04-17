@@ -5,5 +5,4 @@ package it.sevenbits.ReverseAnyArray.IReverse;
  */
 public interface IReverse{
    <T> T[] reverse(T[] array);
-//   String[] reverseStr(String[] array);
 }

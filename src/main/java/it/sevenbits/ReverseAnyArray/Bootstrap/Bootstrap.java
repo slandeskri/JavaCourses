@@ -1,7 +1,9 @@
 package it.sevenbits.ReverseAnyArray.Bootstrap;
 
 
+//import it.sevenbits.ReverseAnyArray.IReverse.ClassReverse.ClassReverse;
 import it.sevenbits.ReverseAnyArray.IReverse.ClassReverse.ClassReverse;
+import it.sevenbits.ReverseAnyArray.IReverse.IReverse;
 
 import java.util.Arrays;
 
@@ -18,21 +20,24 @@ final public class Bootstrap {
     }
 
     /**
-     * Main method
-     * @param arg incoming argument
+     *
+     * @param args
      */
-    public static void main(final String[] arg){
+    public static void main(String[] args) throws NullPointerException {
+try  {
+    Integer[] array = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 10};
+    String[] arrayS = new String[]{"abc", "def", "ghi"};
 
-        Integer[] array=new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 10};
-        String[] arrayS=new String[]{"abc", "def", "ghi"};
+    IReverse revInt = new ClassReverse();
+    revInt.reverse(array);
 
-        ClassReverse revInt = new ClassReverse();
-        revInt.reverse(array);
+    IReverse revStr = new ClassReverse();
+    revStr.reverse(arrayS);
 
-        ClassReverse revStr = new ClassReverse();
-        revStr.reverse(arrayS);
-
-        System.out.println(Arrays.toString(array));
-        System.out.print(Arrays.toString(arrayS));
+    System.out.println(Arrays.toString(array));
+    System.out.print(Arrays.toString(arrayS));
+     } catch (Exception e){
+    throw new NullPointerException();
+     }
     }
 }
