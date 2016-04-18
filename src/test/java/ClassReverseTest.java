@@ -13,10 +13,16 @@ public class ClassReverseTest {
         this.reverser=new ClassReverse();
     }
    @Test
-    public void testReverse(){
+    public void testReverse() throws Exception {
        Integer[] original = new Integer[]{1, 2, 3};
        Integer[] reversed=this.reverser.reverse(original);
        assertArrayEquals("wrong reverse", new Integer[]{3,2,1}, reversed);
+    }
 
+    @Test
+    public void testReverseS() throws Exception {
+        String[] original = new String[]{"ab", "cd", "ef"};
+        String[] reversed = this.reverser.reverse(original);
+        assertArrayEquals("wrong string reverse", new String[]{"ef", "cd", "ab"}, reversed);
     }
 }
